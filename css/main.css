@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 8px; /* colocamos margen para que no este pegado a la pantalla */
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+   text-decoration: none; /* quitamos lo subrayado */ 
+   cursor: pointer; /* aparece manita al posicionarse encima */
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav .nav-right-section {
+    width: 250px;
+    height: auto; /* aqui toma la altura de header de 60px (no puede ser mas alto que su padre) */
+    display: flex; /* display flexible */
+    list-style: none; /* para quitar los puntos de las listas */
+    justify-content: center; /* aqui el contenido se va a centrar en los 250px */
+    align-items: center;
+    
+}
+
+nav .nav-right-section a {
+    margin-right: 10px;
+    color: #000;
+}
+
+nav .nav-right-section .menu-icon {
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat; /* para evitar que se repita en caso de que el contenedor tenga espacio */
+    background-position: center; /* que la imagen quede en el centro de la caja */
+    background-size: contain; /* para que la imagen logre tener las dimensiones del contenedor */
+    width: 25px; /* definimos ancho del contenedor */
+    height: 25px; /* definimos altura del contenedor */
+
+}
+
+nav .nav-right-section img {
+    border-radius: 50%; /* para que se haga un ciruclo */
+    margin-left: 10px; /* para que no este pegado a la izq */
+
+}
+
+main {
+    margin-top: 150px; /* margin temporal */
+    text-align: center; /* para que todo lo que este adentro pueda centrarse */
+}
+
+main .main-logo {
+    width: 530px; /* ancho del logo */
+    margin: 0 auto; /* margin top y bottom igual a 0 y margin-left y right auto */
+    margin-bottom: 35px; /* margin bottom de 35´x */
+
+}
+
+main .main-logo img {
+    width: 300px;
+    height: auto;
+}
+
+main .main-input { /* seccion de busqueda */
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px; /* para que los botones no esten tan pegados */
+}
+
+main .main-input-container { /* contenedor de los botones */
+    width: 525px; /* ancho del contenedor de los botones */
+    border-radius: 100px;
+   /*  border: 1px solid #202124; */ /* color de borde de la nueva pagina */
+    border: 1px solid #dfe1e5; /* color de borde de la anterior pagina */
+    display: flex;
+    justify-content: center; /* justificamos de forma horizontal */
+    align-items: center; /* alineamos de forma vertical */
+}
+
+main .main-input input { /* contenedor y seccion especifica del input */
+    width: 450px;
+    height: 40px;
+    border: none; /* quitamos borde negro */
+    outline: none; /* quitamos el efecto sombreado que sale al seleccionar input */
+}
+
+main .main-input-container:hover { /* asi se declara el efecto hover */
+    box-shadow: 0 1px 6px 0 #20212447; /* genera una sombra al elemento */
+    border-color: #dfe1e500; /* aqui le damos un tono mas obscuro al borde del contenedor solo si se hace el efecto hover */
+
+}
+
+main .main-input .search-icon {
+    background-image: url('https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_search_48px-512.png');
+    background-repeat: no-repeat; /* ´para que no repita la imagen */
+    background-position: center; /* centra la imagen */
+    background-size: contain; /* tamaño del contendor */
+    width: 18px; /* tamaño del icono */
+    height: 18px;
+}
+
+main .main-input .micro-icon {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png');
+    background-repeat: no-repeat; /* ´para que no repita la imagen */
+    background-position: center; /* centra la imagen */
+    background-size: contain; /* tamaño del contendor */
+    width: 18px; /* tamaño del icono */
+    height: 18px;
+    cursor: pointer; /* para que salga la manita al pasar encima */
+}
+
+main .main-buttons { /* contenedor de los botones */
+    width: 530px;
+    margin: 0 auto;
+
+}
+
+main .main-buttons div { /* configuracion a cada uno de los botones (div) */
+    display: inline-block;
+
+}
+
+main .main-buttons button { /* configuracion especifica a la etiqueta "button" */
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2; /* borde que sirve para que no se desplazcan los botones */
+    /* border: 0; */ /* sin bordes */ 
+    font-size: 14px;
+    color: #5f6368; /* color de las letras */
+    border-radius: 5px;
+    padding: 0 15px; /* espacio interno entre el borde y el contenido */
+    margin-right: 15px; /* agregamos una separacion entre los botones */
+
+}
+
+main .main-buttons button:hover {
+    border: 1px solid #c6c6c6; /* color del borde al hacer hover */
+    box-shadow: 0 1px 1px #000001; /* sombra de la caja */
+    color: #222; /* color de las letras */
+    background-color: #f8f8f8; /* color de fono al hacer hover */
+    cursor: pointer; /* para que aparezca la manita */
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    position: absolute; /* definimos absolut para poder establecer al footer hasta el final */
+    bottom: 0; /* fondo */
+    display: grid; /* para poder diferenciar que hace el grid */
+    grid-template-columns: 1fr 1fr; /* template de las columnas (que se divida en dos) */
+    align-items: center; /* alineamos el contenido de las fracciones */
+    font-size: 13px; /* tamaño de las letras */
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4; /* borde superior */
+    
+}
+
+footer ul { /* contenedores de las urls */
+    margin: 10px;
+    list-style: none; /* quitamos los puntos */
+    display: flex; /* para poder mover cada caja (il) */
+    padding-left: 0; /* padding izquierdo 0 de cada ul */
+    
+
+}
+
+footer .footer-left {
+    justify-self: left; /* para que todo se justifique a la izquierda */
+
+}
+
+footer .footer-right {
+    justify-self: right; /* para que todo se justifique a la derecha */
+    
+}
+
+footer ul li a {
+    margin: 10px; /* margen para cada link anclado */
+    color: #5f6368; /* color de la letra */
+}
+
